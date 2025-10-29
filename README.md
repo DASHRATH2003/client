@@ -23,6 +23,12 @@ server: {
 ```
 - Make sure the backend is running before using the dashboard buttons.
 
+## Deploy (Vercel + Render)
+- Set this env var in Vercel Project Settings → Environment Variables:
+  - `VITE_API_BASE=https://server-1-4bfp.onrender.com`
+- Re‑deploy the frontend. It will call the Render backend via that URL.
+- Local dev remains unchanged (proxy to `http://localhost:5000`).
+
 ## Project Structure
 - `src/pages/Dashboard.jsx` — dashboard UI (search, refresh, store snapshot, dark mode toggle)
 - `src/api/api.js` — API helpers for `/api/coins` and `/api/history`
